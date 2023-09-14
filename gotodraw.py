@@ -5,14 +5,14 @@ t = turtle.Turtle()
 
 def background():
     s.bgcolor("#84F3F7")
-    t.goto(-300, 0)
+    t.goto(-400, 0)
     t.pendown()
     t.color("#68F520")
     t.begin_fill()
-    t.goto(300, 0)
-    t.goto(300, -300)
-    t.goto(-300, -300)
-    t.goto(-300, 0)
+    t.goto(400, 0)
+    t.goto(400, -400)
+    t.goto(-400, -400)
+    t.goto(-400, 0)
     t.end_fill()
     t.penup()
 
@@ -58,5 +58,6 @@ def main():
     tree_leaves()
     sun()
     cloud(90, 260)
+    cloud(-200, 290)
 
 main()
