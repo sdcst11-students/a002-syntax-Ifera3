@@ -13,6 +13,5 @@ ylist = [0,0,-45,-45,-90,-90,-45,-45,45,45,90,90,45,45,90,90,45,45,-45,-45,-90,-
 t.penup()
 t.goto(-206, 150)
 t.pendown()
-if len(xlist)==len(ylist):
-    for i in range(len(xlist)):
-        t.goto(xlist[i], ylist[i])
+for i in range(len(xlist)):
+    t.goto(xlist[i], ylist[i])
