@@ -1,32 +1,18 @@
 import turtle
 
 s = turtle.getscreen()
-s.bgpic('maze.gif')
 t = turtle.Turtle()
+
+s.bgpic('maze.gif')
+t.pensize(10)
+t.color("#5F5F5F")
+
+xlist = [-206,-160,-160,-206,-206,-70,-70,-20,-20,-70,-70,20,20,70,70,206,206,160,160,120,120,208,208,265,265,-206]
+ylist = [0,0,-45,-45,-90,-90,-45,-45,45,45,90,90,45,45,90,90,45,45,-45,-45,-90,-90,-150,-150,150,150]
 
 t.penup()
 t.goto(-206, 150)
 t.pendown()
-t.goto(-206, 0)
-t.goto(-160, 0)
-t.goto(-160, -45)
-t.goto(-206, -45)
-t.goto(-206, -90)
-t.goto(-70, -90)
-t.goto(-70, -45)
-t.goto(-20, -45)
-t.goto(-20, 45)
-t.goto(-70, 45)
-t.goto(-70, 90)
-t.goto(20, 90)
-t.goto(20, 45)
-t.goto(70, 45)
-t.goto(70, 90)
-t.goto(206, 90)
-t.goto(206, 45)
-t.goto(160, 45)
-t.goto(160, -45)
-t.goto(120, -45)
-t.goto(120, -90)
-t.goto(208, -90)
-t.goto(208, -150)
+if len(xlist)==len(ylist):
+    for i in range(len(xlist)):
+        t.goto(xlist[i], ylist[i])
